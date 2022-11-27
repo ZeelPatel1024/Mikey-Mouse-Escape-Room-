@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escape School Game</title>
+    <link rel = "stylesheet" href = "myCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "myScript.js"></script>
+</head>
+<h1 id="head1">The Epic Study Game!</h1>
+<body onload = "initialize()">
+
+<canvas id="canvas" width="1200" height="850">
+</canvas>
+
+<br>
+<button type="button" onclick="startAnimation()" id="startButton">Click To Start Game</button><br>
+<br>
+
+<div class="multNumAdding">
+
+    <h1 id="h1InMultinumAddingClass">Multiplying Numbers</h1>
+
+    <p>Add the numbers that you want to multiply (No Limit): </p>
+    <button type="button" onclick="addNumbers()" id="addNumsButton">Click to add numbers</button>
+    <input id="addButton">
+    <p id="addedNums">Your Numbers Are: </p><br>
+</div>
+
+<div class="addQuestioning">
+
+    <h1 id="headerForQuesAndAns">Add Questions & Answers</h1>
+
+    <p>Please input your questions and its questions IN ORDER.</p>
+    <button type="button" onclick="addQuestions()" id="addQuest">Click to add your questions</button>
+    <input id="inputQues">
+    <button type="button" onclick="removeLastElementQuest()">Remove Last Item Added</button>
+
+    <br>
+    <p id="dispQuest">Your questions are: </p>
+
+    <button type="button" onclick="submitQuestions()" id="submitQuest">Click to submit the answer to that question</button>
+    <input id="inputAnsToQues">
+    <button type="button" onclick="removeLastAnsInputed()">Remove Last Item Added</button>
+
+</div>
+
+<div class="displayStuff">
+
+    <h1 id="idInDispStuff">Your Questions</h1>
+
+    <h2 id="foundDisp"> </h2>
+    <p>Answer the question below: </p>
+    <h3 id="result"> </h3>
+
+    <p id="display"> </p>
+
+    <button onclick="submitAnswer()" id="mathButton">Submit Answer</button>
+
+    <input id="mathQAns"><br><br>
+</div>
+
+<div class="studyClass">
+
+    <h1 id="reviewQuesAnAnsIng">Review The Questions & Answers</h1>
+
+    <p>Want To Study? Press This Button. It will go away when you press play.</p>
+    <button id="studyCards" onclick="studyShowCardsFunction()">Show Study Cards</button>
+    <p id="studCarQuestion"> </p>
+    <p id="studCarAns"> </p>
+</div>
+
+<br>
+<div class="lockCombClas">
+
+    <h1 id="lockCombing">Lock Combination</h1>
+
+    <p id="inform"> </p>
+
+    <p id="lockComb">Your Lock Combination is: </p><br>
+
+    <p>Enter the number combination you found in level 2</p>
+
+
+    <button id="lockNums" onclick="lockNumInput()">Enter The Numbers</button>
+    <input id="inpLockNums"><br><br>
+
+</div>
+<br>
+<button type="button" onclick="startNextLevel()" id="nextLevel">Click To Move On To The Next Level</button>
+
+<br><br>
+
+<div class="moreAndLess">
+
+    <h1 id="htpId">Settings</h1>
+
+    <button type="button" id="hTP" onclick="howToPlay()">How To Play</button>
+    <button type="button" id="hTPL" onclick="howToPlayLess()">Show less</button>
+    <button type="button" id="reset" onclick="resetGame()">Replay The Game</button>
+    <button type="button" onclick="showTimeEnd()">Time Jump</button>
+    <p id="hTPDisp"> </p>
+</div>
+
+
+</body>
+</html>
